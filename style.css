@@ -1,0 +1,23 @@
+body {
+  font-family: 'Georgia', serif;
+  text-align: center;
+  background: #f2f2f2;
+}
+
+#certificate {
+  width: 800px;
+  height: 550px;
+  margin: 30px auto;
+  padding: 40px;
+  border: 10px solid #222;
+  background: white;
+}
+
+h1 {
+  letter-spacing: 2px;
+}
+
+#name {
+  color: #2c3e50;
+  font-size: 36px;
+}
