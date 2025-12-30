@@ -141,10 +141,3 @@ Built with:
 No promises, but the odds improve.
 
 ---
-
-> If you want, I can:
-> - Rewrite it **even more chaotic**
-> - Tone it down slightly for recruiters
-> - Make a **LinkedIn post** announcing this project in the same vibe
-> 
-> Just tell me 😌✨
