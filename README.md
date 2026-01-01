@@ -3,141 +3,87 @@
 > **aka:** "Why manually type names when Python can suffer for you?"
 
 A bulk certificate generator that saves you from:
-- typing names 47 times
-- misaligning text in Canva
-- losing sanity at 2 AM before submissions
 
-**Built because:**  
-✨ automation > suffering ✨
+* typing names 47 times
+* misaligning text in Canva
+* losing sanity at 2 AM before submissions
+
+**Built because:** ✨ automation > suffering ✨
 
 ---
 
 ## 💡 What is this?
 
-CertiPy is a Python script that:
-- takes names from a CSV file
-- gently places them on a pre-designed certificate
-- exports everything as PNG and PDF
-- does not judge spelling mistakes (unlike professors)
+CertiPy is a modular Python powerhouse that:
 
-**Basically:**
-> 👉 you give it names  
-> 👉 it gives you certificates  
-> 👉 everyone thinks you worked very hard
+* takes names from a CSV or a web request
+* gently places them on a pre-designed template
+* organizes them into neat individual folders (because clutter is the enemy)
+* exports everything as PNG and PDF
+* can run as a local script or a fancy FastAPI web service
 
 ---
 
 ## 🧠 What it does (no corporate jargon)
 
-- Reads names from `names.csv`
-- Uses a Canva-made certificate template (because design is hard)
-- Centers names perfectly (after emotional debugging)
-- Uses a fancy script font so it looks ✨official✨
-- Exports:
-  - **PNG** (for sharing)
-  - **PDF** (for printing & authority vibes)
+* **Organized Outputs:** Saves every person's certificate in their own folder like `certificates/Name_Surname/`.
+* **CLI Mode:** Bulk generate from `names.csv` using a colorful terminal menu.
+* **API Mode:** Run a local server to generate certificates on-demand via web requests.
+* **Print Ready:** Generates A4 sized PDFs automatically.
 
 ---
 
-## 🧪 Tech Stack (for GitHub credibility)
+## 🗂️ Project Structure (The Glow Up)
 
-| Thing | Why it exists |
-|-------|---------------|
-| **Python** | personality choice |
-| **Pillow** | writes text without complaining |
-| **Pandas** | reads CSV like a champ |
-| **ReportLab** | converts images to PDFs like magic |
-| **Canva** | because I'm not designing borders in CSS |
-
----
-
-## 🗂️ Project Structure (organized, surprisingly)
-
-```
+```text
 certificate-generator/
-├── generate.py                 # the brain
-├── template.png                # the pretty background
-├── names.csv                   # where the victims are listed
-├── GreatVibes-Regular.ttf      # fancy font, very important
-├── certificates/               # output (ignored by git)
-└── README.md                   # you're reading this
+├── main.py                 # The master switch (CLI + Menu)
+├── api.py                  # The web brain (FastAPI)
+├── generator.py            # The heavy lifter (Core logic)
+├── assets/                 # Pretty things (template.png, fonts)
+├── data/                   # The list of victims (names.csv)
+├── certificates/           # The output (neatly filed away)
+└── requirements.txt        # The shopping list
+
 ```
 
 ---
 
-## ▶️ How to Run (low effort edition)
+## ▶️ How to Run (Low Effort Edition)
 
-### 1️⃣ Install dependencies
+### 1️⃣ Setup (Do this once)
 
 ```bash
-pip install pillow pandas reportlab
+python setup.py
+
 ```
 
-### 2️⃣ Add names to `names.csv`
+### 2️⃣ Run the Magic
 
-```csv
-name
-Abhirami Ramadas
-Meera K
-Anu S
-```
-
-### 3️⃣ Run the script
+Just run the main file and follow the colored menu:
 
 ```bash
-python generate.py
+python main.py
+
 ```
 
-### 4️⃣ Look inside `certificates/`
+**OR use shortcuts like a pro:**
 
-Feel accomplished.
-
----
-
-## 🎨 Customization (because control issues)
-
-- **Change name position** → edit `name_y` in `generate.py`
-- **Change font size** → tweak the number (trial & error + vibes)
-- **Change template** → replace `template.png`
-- **Want chaos?** → try Comic Sans (not recommended)
+* **Bulk Local:** `python main.py --local`
+* **Start API:** `python main.py --api`
 
 ---
 
-## 📉 Known Issues (aka realism)
+## 👩‍💻 Authors
 
-- Long names may stretch the universe
-- Script fonts are dramatic
-- If the name disappears, it's probably off-canvas (been there)
+**Abhirami Ramadas**
 
----
+B.Tech Information Technology
 
-## 🤡 Why this project exists
-
-Because:
-- typing names is boring
-- Canva alignment is deceptive
-- automation feels powerful
-- I wanted a clean GitHub repo for once
-
----
-
-## 👩‍💻 Author
-
-**Abhirami Ramadas**  
-B.Tech Information Technology  
 LBS Institute of Technology for Women
 
-Built with:
-- curiosity
-- mild panic
-- several Git mistakes (now resolved)
+**Prakhar Doneria** (Added CLI menu, API integration, and organized file structure)
 
 ---
 
-## ⭐ 
-
-**If you star this repo, future certificates will align on the first run.**
-
-No promises, but the odds improve.
-
----
+⭐ **If you star this repo, your code will compile on the first try.** *(Results may vary, but why take the risk?)*
